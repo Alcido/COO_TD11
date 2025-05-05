@@ -21,7 +21,7 @@ public class MainChargeurMagasin {
 	 */
 	public static void main(String args[]) throws IOException {
 		
-		String repertoire = "../magasinCD_donnees/musicbrainzSimple/";
+		/*String repertoire = "../magasinCD_donnees/musicbrainzSimple/";
 		ChargeurMagasin charge = new ChargeurMagasin(repertoire);
 		Magasin resultat = charge.chargerMagasin();
 		System.out.println(resultat);
@@ -35,7 +35,7 @@ public class MainChargeurMagasin {
 
 		resultat.trierAlbum();
 		System.out.println(resultat);
-
+*/
 	}
 
 }
