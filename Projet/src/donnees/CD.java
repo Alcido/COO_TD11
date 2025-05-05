@@ -97,5 +97,9 @@ public class CD {
 		return (resultat);
 	}
 
-	// TODO 
+	public int compareTo(CD cd) {
+		String n1 = this.nomArtiste;
+		String n2 = cd.nomArtiste;
+		return n1.compareTo(n2);
+	}
 }

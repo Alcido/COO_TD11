@@ -72,4 +72,21 @@ public class Magasin {
 		return listeCds.size();
 	}
 
+	public void trierArtiste() {
+
+		String min = "";
+		ArrayList<CD> listFin = new ArrayList<CD>();
+
+        for (CD cd : listeCds) {
+			CD cdMin = cd;
+            for (int j = 0; j < listeCds.size(); j++) {
+                if (cd.compareTo(listFin.get(j)) < -1) {
+                    cdMin = listFin.get(j);
+                }
+            }
+			listFin.add(cdMin);
+        }
+
+	}
+
 }
