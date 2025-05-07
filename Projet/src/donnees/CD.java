@@ -2,7 +2,6 @@ package donnees;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 /**
  * la classe CD contient toute l'information associee a un CD.</p>
