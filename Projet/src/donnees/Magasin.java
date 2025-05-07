@@ -80,7 +80,7 @@ public class Magasin {
 
 		while (!copieCD.isEmpty()) {
 			CD minCD = copieCD.get(0);
-			for (CD cd : listeCds) {
+			for (CD cd : copieCD) {
 				if (cd.compareToArtiste(minCD) < 0) {
 					minCD = cd;
 				}
@@ -98,7 +98,7 @@ public class Magasin {
 
 		while (!copieCD.isEmpty()) {
 			CD minCD = copieCD.get(0);
-			for (CD cd : listeCds) {
+			for (CD cd : copieCD) {
 				if (cd.compareToTitre(minCD) < 0) {
 					minCD = cd;
 				}

@@ -2,6 +2,7 @@ package donnees;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * la classe CD contient toute l'information associee a un CD.</p>
@@ -107,6 +108,12 @@ public class CD {
 		String n1 = this.nomArtiste;
 		String n2 = cd.nomArtiste;
 		return n1.compareTo(n2);
+	}
+
+	public boolean equals(Object obj) {
+		if (obj==null) return false;
+		if (!(obj instanceof CD cd)) return false;
+        return ((Objects.equals(this.nomArtiste, cd.nomArtiste)) && (Objects.equals(this.nomCD, cd.nomCD)));
 	}
 
 }
