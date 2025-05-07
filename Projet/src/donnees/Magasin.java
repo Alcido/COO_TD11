@@ -1,5 +1,6 @@
 package donnees;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
@@ -74,19 +75,37 @@ public class Magasin {
 
 	public void trierArtiste() {
 
-		String min = "";
-		ArrayList<CD> listFin = new ArrayList<CD>();
+		ArrayList<CD> copieCD = new ArrayList<CD>(listeCds);
+		ArrayList<CD> listeFin = new ArrayList<CD>();
 
-        for (CD cd : listeCds) {
-			CD cdMin = cd;
-            for (int j = 0; j < listeCds.size(); j++) {
-                if (cd.compareTo(listFin.get(j)) < -1) {
-                    cdMin = listFin.get(j);
-                }
-            }
-			listFin.add(cdMin);
-        }
-
+		while (!copieCD.isEmpty()) {
+			CD minCD = copieCD.get(0);
+			for (CD cd : listeCds) {
+				if (cd.compareToArtiste(minCD) < 0) {
+					minCD = cd;
+				}
+			}
+			listeFin.add(minCD);
+			copieCD.remove(minCD);
+		}
+		listeCds = listeFin;
 	}
 
+	public void trierAlbum() {
+
+		ArrayList<CD> copieCD = new ArrayList<CD>(listeCds);
+		ArrayList<CD> listeFin = new ArrayList<CD>();
+
+		while (!copieCD.isEmpty()) {
+			CD minCD = copieCD.get(0);
+			for (CD cd : listeCds) {
+				if (cd.compareToTitre(minCD) < 0) {
+					minCD = cd;
+				}
+			}
+			listeFin.add(minCD);
+			copieCD.remove(minCD);
+		}
+		listeCds = listeFin;
+	}
 }

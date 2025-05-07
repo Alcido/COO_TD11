@@ -97,9 +97,16 @@ public class CD {
 		return (resultat);
 	}
 
-	public int compareTo(CD cd) {
+	public int compareToTitre(CD cd) {
+		String n1 = this.nomCD;
+		String n2 = cd.nomCD;
+		return n1.compareTo(n2);
+	}
+
+	public int compareToArtiste(CD cd) {
 		String n1 = this.nomArtiste;
 		String n2 = cd.nomArtiste;
 		return n1.compareTo(n2);
 	}
+
 }
